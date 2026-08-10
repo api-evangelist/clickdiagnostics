@@ -1,0 +1,110 @@
+generated: '2026-08-09'
+method: searched
+source: https://github.com/Mpower-social
+note: >-
+  mPower Social publishes no public API, so none of the artifacts below are API client
+  SDKs and NO `SDKs` pointer is emitted. This file records the company's real public
+  software distribution surface: a GitHub organization that is largely downstream forks
+  of the open-source health platforms mPower implements for its clients (OpenMRS O3
+  microfrontends, OpenSRP / FHIR Core), a small number of first-party mobile app repos,
+  and eight first-party Android applications distributed on Google Play. Searches of npm,
+  PyPI, Maven Central, NuGet, RubyGems, Packagist and crates.io found no first-party
+  mPower Social package under any obvious name or scope.
+packages: []
+registries_searched:
+- registry: npm
+  query: mpower-social
+  result: no first-party package
+- registry: pypi
+  name: mpower-social
+  status: 404
+- registry: pypi
+  name: mpower
+  result: unrelated third-party package
+mobile_apps:
+- store: google-play
+  developer: mPower Social Enterprises Ltd
+  url: https://play.google.com/store/apps/developer?id=mPower+Social+Enterprises+Ltd
+  official: true
+  apps:
+  - name: Pandoo - Bangla Learning is Fun
+    package: com.mpower.pandoo
+  - name: Pandoo - English Learning
+    package: com.mpower.pandoo.english.english
+  - name: Shudokkho
+    package: com.mpower.android.app.lpin.crm
+  - name: সুফলা (Shufola)
+    package: com.mpower.flutter.app.agri.shufola
+  - name: OctaApp
+    package: com.mpower.product.app.octapp
+  - name: OctaApp Teacher
+    package: com.mpower.product.octaapp.teacher
+  - name: Aceexam
+    package: com.mpower.product.app.mlearning
+  - name: WAVE Foundation
+    package: com.mpower.wave_foundation
+repositories:
+- name: mokabela
+  url: https://github.com/Mpower-social/mokabela
+  language: Java
+  fork: false
+  registry: none
+  description: Flutter application source (no published package).
+- name: Awaztulun
+  url: https://github.com/Mpower-social/Awaztulun
+  fork: false
+  registry: none
+  description: Android incident record app.
+- name: files
+  url: https://github.com/Mpower-social/files
+  fork: false
+  registry: none
+  description: Static file host repository (README + app-ads.txt).
+forks:
+- name: openmrs-esm-patient-management
+  url: https://github.com/Mpower-social/openmrs-esm-patient-management
+  upstream: https://github.com/openmrs/openmrs-esm-patient-management
+- name: openmrs-custom-distro-referenceapplication
+  url: https://github.com/Mpower-social/openmrs-custom-distro-referenceapplication
+  upstream: https://github.com/openmrs/openmrs-distro-referenceapplication
+- name: openmrs-custom-distro-referenceapplication-telemedicine
+  url: https://github.com/Mpower-social/openmrs-custom-distro-referenceapplication-telemedicine
+  upstream: https://github.com/openmrs/openmrs-distro-referenceapplication
+- name: openmrs-android-client
+  url: https://github.com/Mpower-social/openmrs-android-client
+  upstream: https://github.com/openmrs/openmrs-android-client
+- name: fhircore-smart-health-bd
+  url: https://github.com/Mpower-social/fhircore-smart-health-bd
+  upstream: https://github.com/opensrp/fhircore
+- name: openmrs-esm-form-engine-lib-telemedicine
+  url: https://github.com/Mpower-social/openmrs-esm-form-engine-lib-telemedicine
+  upstream: https://github.com/openmrs/openmrs-esm-form-engine-lib
+- name: openmrs-esm-form-builder-telemedicine
+  url: https://github.com/Mpower-social/openmrs-esm-form-builder-telemedicine
+  upstream: https://github.com/openmrs/openmrs-esm-form-builder
+- name: openmrs-esm-patient-chart-telemedicine
+  url: https://github.com/Mpower-social/openmrs-esm-patient-chart-telemedicine
+  upstream: https://github.com/openmrs/openmrs-esm-patient-chart
+- name: esm-ugandaemr-bed-management-app
+  url: https://github.com/Mpower-social/esm-ugandaemr-bed-management-app
+  upstream: https://github.com/METS-Programme/esm-ugandaemr-bed-management-app
+- name: mpower-esm-bed-management-app
+  url: https://github.com/Mpower-social/mpower-esm-bed-management-app
+  upstream: https://github.com/openmrs/openmrs-esm-template-app
+x-evidence:
+  fetched: '2026-08-09'
+  urls:
+  - url: https://api.github.com/orgs/mpower-social
+    status: 200
+  - url: https://api.github.com/orgs/Mpower-social/repos?per_page=100
+    status: 200
+  - url: https://pypi.org/pypi/mpower-social/json
+    status: 404
+  - url: https://registry.npmjs.org/-/v1/search?text=mpower-social
+    status: 200
+  - url: https://play.google.com/store/apps/developer?id=mPower+Social+Enterprises+Ltd
+    status: 200
+  note: >-
+    A second GitHub organization, https://github.com/mPowerSocial (created 2013), also
+    belongs to the company but has 0 public repositories. The active organization is
+    https://github.com/Mpower-social (created 2024-04-30, 14 public repositories).

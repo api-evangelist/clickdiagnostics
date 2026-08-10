@@ -1,0 +1,99 @@
+generated: '2026-08-09'
+method: searched
+source: https://mpower-social.com/about-us/
+docs: https://mpower-social.com/about-us/
+note: >-
+  mPower Social is an implementer, not an API publisher. Every standard below is a
+  standard mPower works WITH on behalf of client governments and NGOs — not a standard
+  any mPower-operated public API has been observed to conform to, because mPower operates
+  no public API. `conforms` is therefore recorded as false for every API/interoperability
+  standard: the company makes credible practice claims, but there is no public contract
+  to check them against. The one item recorded as conformant is a published organizational
+  certification (ISO 9001:2015), which is quality-management scope, not API, security, or
+  privacy scope.
+certifications:
+- id: iso-9001-2015
+  name: ISO 9001:2015
+  scope: Quality management systems (organizational)
+  conforms: true
+  evidence: >-
+    "mPower Social Enterprises Limited, an ISO 9001:2015 certified organization based in
+    Bangladesh" — https://mpower-social.com/about-us/ (HTTP 200, fetched 2026-08-09).
+    Self-asserted on the company website; no certificate number, certifying body, or
+    expiry date is published, and no trust center or certificate registry entry was found.
+  caveat: >-
+    Not an API, security or privacy compliance program. No SOC 2, ISO 27001, HIPAA, PCI
+    DSS or GDPR/DPA documentation is published anywhere on mpower-social.com.
+standards:
+- id: fhir
+  name: HL7 FHIR
+  conforms: false
+  practice_claim: true
+  evidence: >-
+    "Pioneering role in enabling interoperability of health system through Shared Health
+    Record and FHIR" — https://mpower-social.com/about-us/ (HTTP 200). Corroborated by
+    https://github.com/Mpower-social/fhircore-smart-health-bd, a downstream fork of the
+    OpenSRP/FHIR Core Android application. No FHIR CapabilityStatement, no public FHIR
+    endpoint, and no ImplementationGuide is published by mPower.
+- id: who-smart-guidelines
+  name: WHO SMART Guidelines
+  conforms: false
+  practice_claim: true
+  evidence: >-
+    "Pioneering role in country adoptation of WHO's SMART guidelines for digital health" —
+    https://mpower-social.com/about-us/ (HTTP 200). No published Digital Adaptation Kit or
+    L3/L4 machine-readable artifact was found.
+- id: dhis2-web-api
+  name: DHIS2 Web API
+  conforms: false
+  practice_claim: true
+  evidence: >-
+    DHIS2 named as a core platform on https://mpower-social.com/about-us/ (HTTP 200). The
+    only mPower DHIS2 host found in DNS, dhis2.mpower-social.com (A 27.147.129.52), does
+    not answer on 443 — the TCP connection times out — so no /api/ surface, /api/schemas,
+    or DHIS2 OpenAPI document could be reached anonymously.
+- id: openmrs-rest-api
+  name: OpenMRS REST / O3 API
+  conforms: false
+  practice_claim: true
+  evidence: >-
+    Ten of the fourteen public repositories in https://github.com/Mpower-social are
+    downstream forks of OpenMRS 3.x microfrontends and distributions (HTTP 200). These
+    consume the upstream OpenMRS API; mPower publishes no contract of its own.
+- id: oauth2
+  name: OAuth 2.0
+  conforms: false
+  evidence: >-
+    https://mpower-social.com/.well-known/oauth-authorization-server and
+    /.well-known/openid-configuration both returned HTTP 404 on 2026-08-09.
+- id: oidc
+  name: OpenID Connect
+  conforms: false
+  evidence: >-
+    https://mpower-social.com/.well-known/openid-configuration returned HTTP 404 on
+    2026-08-09.
+- id: rfc9457
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No public API and no OpenAPI, so no error envelope is observable.
+- id: rfc9116
+  name: RFC 9116 security.txt
+  conforms: false
+  evidence: >-
+    https://mpower-social.com/.well-known/security.txt returned HTTP 404 on 2026-08-09.
+x-evidence:
+  fetched: '2026-08-09'
+  urls:
+  - url: https://mpower-social.com/about-us/
+    status: 200
+  - url: https://mpower-social.com/.well-known/security.txt
+    status: 404
+  - url: https://mpower-social.com/.well-known/openid-configuration
+    status: 404
+  - url: https://mpower-social.com/.well-known/oauth-authorization-server
+    status: 404
+  - url: https://api.github.com/orgs/Mpower-social/repos?per_page=100
+    status: 200
+  - url: https://dhis2.mpower-social.com/api/system/info
+    status: 0
+    note: TCP connection to port 443 timed out after 15s; host resolves to 27.147.129.52
