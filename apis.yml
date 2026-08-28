@@ -16,6 +16,17 @@ description: 'mPower Social Enterprises Ltd. is a Dhaka, Bangladesh technology-f
   contract; its public software surface is a GitHub organization made up largely of
   downstream forks of the open-source health platforms it implements, plus a set of
   first-party Android apps on Google Play.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://mpower-social.com/wp-content/uploads/2024/09/mPower-icon.png
 url: https://raw.githubusercontent.com/api-evangelist/clickdiagnostics/refs/heads/main/apis.yml
 x-type: company
